@@ -45,7 +45,7 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 23280}
+      Script: {instanceID: 5702}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -627,6 +627,12 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: d1af2af241207b8b73414eec6c05a117
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ballscript
+  - hash:
+      serializedVersion: 2
       Hash: da5a949a0bbd2ff91bc51c5805c2c41f
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -877,13 +883,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: d1af2af241207b8b73414eec6c05a117
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ballscript
   platform: 20
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/wryyy/Documents/GitHub/csc470-fall2024/games/machine
+  playerPath: C:/Users/wryyy/Documents/GitHub/csc470-fall2024/games/machine/Assignment3
