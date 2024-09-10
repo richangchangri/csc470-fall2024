@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ballscript : MonoBehaviour
 {
+    int score = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +16,17 @@ public class ballscript : MonoBehaviour
     {
         
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        
+        score++;
+        Debug.Log("Socre:" + score);
+
+    }
+
+    //public void OnCollisionEnter(Collision col)
+    //{
+        //Debug.Log("Hit the Ground");
+    //}
 }
