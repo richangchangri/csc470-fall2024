@@ -11290,6 +11290,10 @@ struct SignatureArrayType_t2363B762F8C412C7C4054B75639099E0DFA8B915  : public Si
 	int32_t ____rank;
 	bool ____isMultiDim;
 };
+struct ballscript_tFFEBA5216D3F04A963683509D079E63E63B47EF9  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	int32_t ___score;
+};
 struct U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA_StaticFields
 {
 	__StaticArrayInitTypeSizeU3D36_tE3135E025C70F21BBD65107243EE57F8AA699792 ___AB2BA87047769919499789118C8555FA67215CB847A517249E542257CD2BBA4A;
@@ -16659,6 +16663,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable2105[3] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable2110[3] = 
 {
 	static_cast<int32_t>(offsetof(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields, ___IsTextualNodeBitmap)),static_cast<int32_t>(offsetof(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields, ___CanReadContentAsBitmap)),static_cast<int32_t>(offsetof(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields, ___HasValueBitmap)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable2113[1] = 
+{
+	static_cast<int32_t>(offsetof(ballscript_tFFEBA5216D3F04A963683509D079E63E63B47EF9, ___score)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable2114[5] = 
 {
 	static_cast<int32_t>(offsetof(MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E, ___FilePathsData)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E, ___TypesData)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E, ___TotalTypes)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E, ___TotalFiles)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E, ___IsEditorOnly)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
