@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -340,8 +340,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 825d0000
-    m_LastClickedID: 23938
+    m_SelectedIDs: ac5a0000
+    m_LastClickedID: 23212
     m_ExpandedIDs: 00000000a25a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -397,7 +397,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -512,7 +512,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: e4ebffff34ecffff76edffff30fbffff
+      m_ExpandedIDs: baf4ffff0af5ffff4cf6ffff30fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -866,9 +866,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 4.7420006, y: 1.2840002, z: -19.999}
+    m_Target: {x: 6.8898416, y: 1.5271807, z: 2.1579757}
     speed: 2
-    m_Value: {x: 4.7420006, y: 1.2840003, z: -19.999}
+    m_Value: {x: 6.8898416, y: 1.5271807, z: 2.1579757}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -914,13 +914,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.014658875, y: 0.062069133, z: 0.00091941905, w: 0.99781877}
+    m_Target: {x: -0.010172203, y: 0.056084305, z: 0.00057922775, w: 0.9982289}
     speed: 2
-    m_Value: {x: -0.016157927, y: 0.06207667, z: 0.0010126146, w: 0.99794006}
+    m_Value: {x: -0.0101736775, y: 0.056092434, z: 0.0005793117, w: 0.99837357}
   m_Size:
     m_Target: 12.124355
     speed: 2
-    m_Value: 12.124354
+    m_Value: 12.124355
   m_Ortho:
     m_Target: 0
     speed: 2
