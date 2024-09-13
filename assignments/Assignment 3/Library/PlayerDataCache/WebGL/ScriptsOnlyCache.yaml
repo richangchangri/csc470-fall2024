@@ -886,4 +886,4 @@ ScriptsOnlyBuild:
   platform: 20
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/wryyy/Documents/GitHub/csc470-fall2024/games/machine/Assignment3
+  playerPath: C:/Users/wryyy/Documents/GitHub/csc470-fall2024/games/machine
