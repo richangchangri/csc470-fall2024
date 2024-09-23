@@ -1452,6 +1452,25 @@ IL_0098:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_47;
 		L_47 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_46, NULL);
 		Transform_LookAt_mFEF7353E4CAEB85D5F7CEEF9276C3B8D6E314C6C(L_45, L_47, NULL);
+		float L_48 = __this->___forwardSpeed;
+		float L_49 = __this->___speedDecreaseRate;
+		float L_50;
+		L_50 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		__this->___forwardSpeed = ((float)il2cpp_codegen_subtract(L_48, ((float)il2cpp_codegen_multiply(L_49, L_50))));
+		float L_51 = __this->___forwardSpeed;
+		float L_52 = __this->___minimumSpeed;
+		if ((!(((float)L_51) < ((float)L_52))))
+		{
+			goto IL_0176;
+		}
+	}
+	{
+		float L_53 = __this->___minimumSpeed;
+		__this->___forwardSpeed = L_53;
+	}
+
+IL_0176:
+	{
 		return;
 	}
 }
@@ -1552,8 +1571,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlaneScript__ctor_mF4FD5F6DDF8BE7383691C
 		__this->___forwardSpeed = (12.0f);
 		__this->___xRotationSpeed = (90.0f);
 		__this->___yRotationSpeed = (90.0f);
-		__this->___speedDecreaseRate = (1.0f);
-		__this->___boostAmount = (5.0f);
+		__this->___speedDecreaseRate = (3.0f);
+		__this->___boostAmount = (7.0f);
 		__this->___minimumSpeed = (2.0f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;

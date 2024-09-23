@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
 public class PlaneScript : MonoBehaviour
 {
     // Remember to assign a value to this variable in the Unity editor!
@@ -12,8 +13,13 @@ public class PlaneScript : MonoBehaviour
     public Terrain terrain;
 
     public TMP_Text scoreText;
+    // public TMP_Text timerText;
+    // public TMP_Text loseText;
+
 
     int score = 0;
+
+    
 
     // These variables will control how the plane moves
     float forwardSpeed = 12f;
@@ -21,9 +27,12 @@ public class PlaneScript : MonoBehaviour
     float yRotationSpeed = 90f;
 
     // Speed decrease rate and boost amount
-    float speedDecreaseRate = 1f;
-    float boostAmount = 5f;
+    float speedDecreaseRate = 3f;
+    float boostAmount = 7f;
     float minimumSpeed = 2f;
+
+    // Timer for the game
+    // public float gameTime = 60f; // Total time in seconds
 
     // Store the starting position of the plane
     Vector3 startingPosition;
@@ -31,6 +40,9 @@ public class PlaneScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Initially hide the "You Lose" message
+        //loseText.gameObject.SetActive(false);
+
         // Save the initial position of the plane at the start of the game
         startingPosition = transform.position;
 
@@ -48,6 +60,23 @@ public class PlaneScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Decrease the timer
+        // gameTime -= Time.deltaTime;
+
+        // Update the timer display
+        // imerText.text = "Time: " + Mathf.Ceil(gameTime).ToString();
+
+        // Check if time has run out
+        // Initially hide the "You Lose" message
+        // if (gameTime <= 0)
+        // {
+        // Destroy(gameObject);
+
+        // Display the "You Lose" message
+        // loseText.text = "You Lose!";
+        // loseText.gameObject.SetActive(true); 
+        //}
+
         // Get directional input (up, down, left, right)
         float hAxis = Input.GetAxis("Horizontal"); // -1 if left is pressed, 1 if right is pressed, 0 if neither
         float vAxis = Input.GetAxis("Vertical"); // -1 if down is pressed, 1 if up is pressed, 0 if neither
@@ -77,6 +106,16 @@ public class PlaneScript : MonoBehaviour
         cameraObject.transform.position = cameraPosition;
         // LookAt is a utility function that rotates a transform so that it looks at a point
         cameraObject.transform.LookAt(transform.position);
+
+        // Decrease the forward speed gradually
+        forwardSpeed -= speedDecreaseRate * Time.deltaTime;
+
+        // Ensure the forward speed does not drop below a minimum value
+        if (forwardSpeed < minimumSpeed)
+        {
+            forwardSpeed = minimumSpeed;
+        }
+
     }
 
 
