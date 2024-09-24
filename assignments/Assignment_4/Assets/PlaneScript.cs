@@ -13,8 +13,7 @@ public class PlaneScript : MonoBehaviour
     public Terrain terrain;
 
     public TMP_Text scoreText;
-    // public TMP_Text timerText;
-    // public TMP_Text loseText;
+    
 
 
     int score = 0;
@@ -31,8 +30,6 @@ public class PlaneScript : MonoBehaviour
     float boostAmount = 7f;
     float minimumSpeed = 2f;
 
-    // Timer for the game
-    // public float gameTime = 60f; // Total time in seconds
 
     // Store the starting position of the plane
     Vector3 startingPosition;
@@ -63,19 +60,8 @@ public class PlaneScript : MonoBehaviour
         // Decrease the timer
         // gameTime -= Time.deltaTime;
 
-        // Update the timer display
-        // imerText.text = "Time: " + Mathf.Ceil(gameTime).ToString();
+        
 
-        // Check if time has run out
-        // Initially hide the "You Lose" message
-        // if (gameTime <= 0)
-        // {
-        // Destroy(gameObject);
-
-        // Display the "You Lose" message
-        // loseText.text = "You Lose!";
-        // loseText.gameObject.SetActive(true); 
-        //}
 
         // Get directional input (up, down, left, right)
         float hAxis = Input.GetAxis("Horizontal"); // -1 if left is pressed, 1 if right is pressed, 0 if neither

@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - GameManager
     - PlaneScript
+    - timedownSc
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro:
@@ -107,6 +108,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6008}
     - Class: 114
       Script: {instanceID: 7300}
+    - Class: 114
+      Script: {instanceID: 24640}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -966,6 +969,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 4642e4e806a72551e10a68a277c724b4
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: timedownSc
   platform: 20
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
