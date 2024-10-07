@@ -18,9 +18,9 @@ public class GameManager : MonoBehaviour
         simulationTimer = simulationRate;
 
         // Instantiate a grid of cells
-        grid = new CellScript[10,10];
-        for (int x = 0; x < 10; x++) {
-            for (int y = 0; y < 10; y++) {
+        grid = new CellScript[15,15];
+        for (int x = 0; x < 15; x++) {
+            for (int y = 0; y < 15; y++) {
                 // Use the x, y interator variables to compute each cell's position. If this is confusing
                 // to you, try thinking about instantiating a row of cells rather than a grid, and using
                 // the iterator variable of a single for loop to compute the position.
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
             for (int y = yIndex - 1; y <= yIndex + 1; y++)
             {
                 // This if prevents us from indexing the two dimensional array out of bounds
-                if (x >= 0 && x < 10 && y >= 0 && y < 10)
+                if (x >= 0 && x < 15 && y >= 0 && y < 15)
                 {
                     // This if makes sure we don't consider the cell itself while counting its
                     // neighbors
@@ -82,10 +82,10 @@ public class GameManager : MonoBehaviour
 
     void Simulate()
     {
-        bool[,] nextAlive = new bool[10,10];
-        for (int x = 0; x < 10; x++)
+        bool[,] nextAlive = new bool[15,15];
+        for (int x = 0; x < 15; x++)
         {
-            for (int y = 0; y < 10; y++)
+            for (int y = 0; y < 15; y++)
             {
                 int neighborCount = CountNeighbors(x, y);
                 // Update the cell's alive value based on Conway's Game of Life rules. Note, that we 
@@ -111,9 +111,9 @@ public class GameManager : MonoBehaviour
         }
 
         // Copy over updated values of alive
-        for (int x = 0; x < 10; x++)
+        for (int x = 0; x < 15; x++)
         {
-            for (int y = 0; y < 10; y++)
+            for (int y = 0; y < 15; y++)
             {
                 // Copy over the updated value
                 grid[x,y].alive = nextAlive[x,y];
