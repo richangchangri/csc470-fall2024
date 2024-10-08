@@ -71,6 +71,27 @@ public class GameManager : MonoBehaviour
         // This if statement will fire ever "simulationRate" amount of time. This is
         // called the "timer pattern" and you should use something like it whenever you
         // want to have timed events that happen at a cinsistent rhythm.
+
+        // Raycast downwards from the player to detect the cell they are standing on
+        RaycastHit hit;
+        if (Physics.Raycast(Camera.main.transform.position, Vector3.down, out hit, 2f))
+        {
+            // Check if we hit a cell
+            CellScript cell = hit.collider.GetComponent<CellScript>();
+            if (cell != null)
+            {
+                // Highlight the cell the player is standing on (optional)
+                cell.SetHighlight(true);
+
+                // Toggle the state of the cell when the player presses the 'E' key
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    cell.alive = !cell.alive;
+                    cell.SetColor(); // Update the cell color based on its new state
+                }
+            }
+        }
+
         if (simulationTimer < 0) {
             if (Input.GetKey(KeyCode.Space)) {
                 // Evolve our grid

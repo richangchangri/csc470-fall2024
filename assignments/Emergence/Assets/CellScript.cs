@@ -30,7 +30,8 @@ public class CellScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
+
     }
 
     void OnMouseDown()
@@ -50,4 +51,18 @@ public class CellScript : MonoBehaviour
         // }
         cubeRenderer.material.color = Color.HSVToRGB(aliveCount / 100f, 0.6f, 1f);
     }
+
+    public void SetHighlight(bool highlight)
+    {
+        if (highlight)
+        {
+            // Change the material or color to indicate the player is standing on this cell
+            cubeRenderer.material.color = Color.black; 
+        }
+        else
+        {
+            SetColor(); // Revert to the original color based on alive status
+        }
+    }
+
 }
