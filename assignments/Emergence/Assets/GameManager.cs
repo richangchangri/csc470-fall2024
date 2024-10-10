@@ -129,7 +129,11 @@ public class GameManager : MonoBehaviour
                     nextAlive[x,y] = grid[x,y].alive;
                 }
             }
+  
+
         }
+
+        
 
         // Copy over updated values of alive
         for (int x = 0; x < 15; x++)
@@ -155,5 +159,39 @@ public class GameManager : MonoBehaviour
                 grid[x,y].SetColor();
             }
         }
+
+        // Detect certain patterns
+        bool IsBlock(int x, int y)
+        {
+            if (x < 14 && y < 14)
+            {
+                return grid[x, y].alive && grid[x + 1, y].alive &&
+                       grid[x, y + 1].alive && grid[x + 1, y + 1].alive;
+            }
+            return false;
+        }
+
+        bool IsBlinker(int x, int y)
+        {
+            if (y < 13)
+            {
+                return grid[x, y].alive && grid[x, y + 1].alive && grid[x, y + 2].alive;
+            }
+            return false;
+        }
+
+        bool IsGlider(int x, int y)
+        {
+            if (x < 13 && y < 13)
+            {
+                return grid[x, y + 1].alive && grid[x + 1, y + 2].alive &&
+                       grid[x + 2, y].alive && grid[x + 2, y + 1].alive && grid[x + 2, y + 2].alive;
+            }
+            return false;
+        }
+
+        
+
+
     }
 }
