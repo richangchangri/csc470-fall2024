@@ -34,6 +34,15 @@ public class GameManager : MonoBehaviour
                 grid[x,y].yIndex = y;
             }
         }
+
+        // Add obstacles to the environment
+        for (int i = 0; i < 5; i++)
+        {
+            Vector3 obstaclePos = new Vector3(Random.Range(0, 15), 1, Random.Range(0, 15));
+            GameObject obstacle = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            obstacle.transform.position = obstaclePos;
+            obstacle.transform.localScale = new Vector3(2, 5, 2);
+        }
     }
 
     public int CountNeighbors(int xIndex, int yIndex)
