@@ -51,6 +51,8 @@ public class CellScript : MonoBehaviour
         Vector3 newScale = transform.localScale;
         newScale.y = alive ? 2f : 0.5f; // Taller when alive, shorter when dead
         transform.localScale = newScale;
+
+        cubeRenderer.material.color = Color.HSVToRGB(aliveCount / 100f, 0.6f, 1f);
     }
 
     public void SetHighlight(bool highlight)
