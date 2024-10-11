@@ -44,14 +44,11 @@ public class CellScript : MonoBehaviour
         Debug.Log("(" + xIndex + "," + yIndex + "): " + neighborCount);
     }
     public void SetColor() {
-        // Set color based on alive status
-        cubeRenderer.material.color = alive ? aliveColor : deadColor;
-
-        // Change the height of the cell based on alive status
-        Vector3 newScale = transform.localScale;
-        newScale.y = alive ? 2f : 0.5f; // Taller when alive, shorter when dead
-        transform.localScale = newScale;
-
+        // if (alive) {
+        //     cubeRenderer.material.color = aliveColor;
+        // } else {
+        //     cubeRenderer.material.color = deadColor;
+        // }
         cubeRenderer.material.color = Color.HSVToRGB(aliveCount / 100f, 0.6f, 1f);
     }
 
