@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 40
+  controlID: 102
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -514,18 +514,18 @@ MonoBehaviour:
       m_ExpandedIDs: 30fbffff305a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Text (TMP)
-        m_OriginalName: Text (TMP)
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 23030
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -915,7 +915,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.08106641, y: -0.1977345, z: 0.01641651, w: 0.97674173}
     speed: 2
-    m_Value: {x: 0.08253288, y: -0.19771315, z: 0.016713368, w: 0.9766363}
+    m_Value: {x: -0.0810664, y: 0.19773449, z: -0.01641651, w: -0.97674173}
   m_Size:
     m_Target: 111.03951
     speed: 2
