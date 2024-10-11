@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
         }
 
         // Add obstacles to the environment
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 2; i++)
         {
             Vector3 obstaclePos = new Vector3(Random.Range(0, 15), 1, Random.Range(0, 15));
             GameObject obstacle = GameObject.CreatePrimitive(PrimitiveType.Cube);
