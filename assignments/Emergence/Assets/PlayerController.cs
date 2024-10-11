@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     {
         // Update the energy display on the UI
         if (energyText != null)
-            energyText.text = "Energy: " + playerEnergy + "%";
+            energyText.text = "Energy: " + playerEnergy + "%(click to change the cell)";
 
         // Automatically regenerate energy over time
         if (playerEnergy < maxEnergy)
