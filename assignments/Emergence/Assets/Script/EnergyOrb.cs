@@ -15,9 +15,16 @@ public class NewBehaviourScript : MonoBehaviour
     {
         
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        /* PlayerController player = other.GetComponent<PlayerController>();
+        if (player != null)
+        {
+            player.CollectEnergy(1); // Adds 1 energy
+            Destroy(gameObject); // Remove the orb from the scene
+        } */
+    }
 }
 
-public class EnergyOrb : MonoBehaviour
-{
-    
-}
+

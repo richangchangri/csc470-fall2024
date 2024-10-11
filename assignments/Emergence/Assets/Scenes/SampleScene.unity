@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 262793932}
   - component: {fileID: 262793934}
   - component: {fileID: 262793933}
+  - component: {fileID: 262793935}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -256,6 +257,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 262793931}
   m_CullTransparentMesh: 1
+--- !u!114 &262793935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262793931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ba4f49a27f1f08429f8ad170739b216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerEnergy: 10
+  energyText: {fileID: 0}
 --- !u!1 &596405095
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,9 +773,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4002405303916235023}
+  - component: {fileID: 4002405303916235024}
   m_Layer: 0
   m_Name: NestedParent_Unpack
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -984,6 +1000,20 @@ Transform:
   - {fileID: 6229169185982993826}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4002405303916235024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081326649825090463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ba4f49a27f1f08429f8ad170739b216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerEnergy: 10
+  energyText: {fileID: 0}
 --- !u!1001 &6229169185982993825
 PrefabInstance:
   m_ObjectHideFlags: 0
