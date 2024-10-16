@@ -38,10 +38,10 @@ public class PlayerController : MonoBehaviour
         }
 
         // Check if the mouse is being held down (left-click)
-        if (Input.GetMouseButton(0))  // Continuous detection for left-click hold
+        if (Input.GetMouseButton(0) && playerEnergy > 0)  //  Only interact if energy is greater than 0
         {
             RaycastHit hit;
-            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 2f))
+            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 10f))
             {
                 CellScript cell = hit.collider.GetComponent<CellScript>();
                 if (cell != null && playerEnergy > 0)
