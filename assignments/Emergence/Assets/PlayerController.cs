@@ -6,7 +6,7 @@ using UnityEngine.UI; // For displaying the energy on the UI
 
 public class PlayerController : MonoBehaviour
 {
-    public int playerEnergy = 100;         // Player starts with 100 energy (percentage)
+    public int playerEnergy = 0;         // Player starts with 0 energy (percentage)
     public int maxEnergy = 100;            // Maximum energy player can have
     public float energyRegenRate = 2f;     // How fast energy regenerates (in seconds)
     public float energyRegenAmount = 1f;   // Amount of energy to regenerate each interval
