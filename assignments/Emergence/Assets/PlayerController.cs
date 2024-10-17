@@ -11,16 +11,23 @@ public class PlayerController : MonoBehaviour
     public float energyRegenRate = 2f;     // How fast energy regenerates (in seconds)
     public float energyRegenAmount = 1f;   // Amount of energy to regenerate each interval
     public Text energyText;                // UI text to display energy percentage
+    public TextMeshProUGUI gameOverText;   // TMP text to display Game Over message
+    public bool isGameOver = false;        // Track game state
 
     private float energyRegenTimer;        // Timer to track energy regeneration
 
     void Start()
     {
         energyRegenTimer = energyRegenRate;   // Initialize the energy regeneration timer
+       
+        gameOverText.gameObject.SetActive(false);  // Hide the Game Over text initially
     }
 
     void Update()
     {
+        if (isGameOver)
+            return;  // If the game is over, stop updating logic
+
         // Update the energy display on the UI
         if (energyText != null)
             energyText.text = "Energy: " + playerEnergy + "%(click to change the cell)";
@@ -69,4 +76,22 @@ public class PlayerController : MonoBehaviour
             playerEnergy = maxEnergy;  // Ensure the energy doesn't exceed the max limit
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))  // Check if the player collided with an obstacle
+        {
+            GameOver();  // Call Game Over function
+        }
+    }
+
+    void GameOver()
+    {
+        isGameOver = true;
+        gameOverText.gameObject.SetActive(true);  // Show the Game Over text
+        gameOverText.text = "Game Over";          // Update the text content
+                                                  // Optionally, stop other game elements here (e.g., disable player movement)
+    }
+
+
 }
