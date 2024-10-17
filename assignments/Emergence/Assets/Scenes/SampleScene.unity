@@ -550,7 +550,7 @@ MonoBehaviour:
   energyRegenRate: 2
   energyRegenAmount: 1
   energyText: {fileID: 0}
-  gameOverText: {fileID: 0}
+  gameOverText: {fileID: 1671347532}
   isGameOver: 0
 --- !u!114 &1671347532
 MonoBehaviour:
